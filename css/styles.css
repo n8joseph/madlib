@@ -1,0 +1,61 @@
+body {
+	border-style: solid;
+	margin: 10% 10%;
+}
+
+.headerdiv {
+	border-style: solid;
+}
+
+
+#happy {
+	display: inline-block;
+	height: 80px;
+	margin: 15px 45px;
+	
+}
+
+#logo {
+	
+	
+	height: 65px;
+	padding: 0;
+	margin: 0;
+
+}
+
+#happydiv {
+	display: inline-block;
+	border-style: solid;
+	max-height: 120px;
+
+}
+
+#logodiv {
+	display: inline-block;
+	border-style: solid;
+	margin-left: -4px;
+	max-height: 120px;
+	width: 50%;
+	margin: 0 auto;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+
+#inputs {
+	border-style: solid;
+	padding: 20px 0 100px 0;
+}
+
+input {
+	border-style: solid;
+}
+
+#story {
+	border-style: solid;
+	padding-bottom: 100px;	
+}

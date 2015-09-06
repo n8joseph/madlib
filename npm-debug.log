@@ -1,0 +1,175 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/natejoseph/.nvm/v0.10.40/bin/node',
+1 verbose cli   '/Users/natejoseph/.nvm/v0.10.40/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '[-g]',
+1 verbose cli   '[--save-dev]',
+1 verbose cli   'reload' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.40
+4 verbose cache add [ '[-g]', null ]
+5 verbose cache add name=undefined spec="[-g]" args=["[-g]",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: '[-g]',
+6 verbose parsed url   path: '[-g]',
+6 verbose parsed url   href: '[-g]' }
+7 verbose cache add [ '[--save-dev]', null ]
+8 verbose cache add name=undefined spec="[--save-dev]" args=["[--save-dev]",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: '[--save-dev]',
+9 verbose parsed url   path: '[--save-dev]',
+9 verbose parsed url   href: '[--save-dev]' }
+10 verbose cache add [ 'reload', null ]
+11 verbose cache add name=undefined spec="reload" args=["reload",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'reload',
+12 verbose parsed url   path: 'reload',
+12 verbose parsed url   href: 'reload' }
+13 silly lockFile 6f826bb4-g [-g]
+14 verbose lock [-g] /Users/natejoseph/.npm/6f826bb4-g.lock
+15 silly lockFile 425ca273-save-dev [--save-dev]
+16 verbose lock [--save-dev] /Users/natejoseph/.npm/425ca273-save-dev.lock
+17 silly lockFile d6e6e576-reload reload
+18 verbose lock reload /Users/natejoseph/.npm/d6e6e576-reload.lock
+19 silly lockFile 6f826bb4-g [-g]
+20 silly lockFile 6f826bb4-g [-g]
+21 silly lockFile 425ca273-save-dev [--save-dev]
+22 silly lockFile 425ca273-save-dev [--save-dev]
+23 verbose addNamed [ '[-g]', '' ]
+24 verbose addNamed [ null, '*' ]
+25 silly lockFile e58810aa-g [-g]@
+26 verbose lock [-g]@ /Users/natejoseph/.npm/e58810aa-g.lock
+27 silly lockFile d6e6e576-reload reload
+28 silly lockFile d6e6e576-reload reload
+29 verbose addNamed [ '[--save-dev]', '' ]
+30 verbose addNamed [ null, '*' ]
+31 silly lockFile c0a688f3-save-dev [--save-dev]@
+32 verbose lock [--save-dev]@ /Users/natejoseph/.npm/c0a688f3-save-dev.lock
+33 verbose addNamed [ 'reload', '' ]
+34 verbose addNamed [ null, '*' ]
+35 silly lockFile a7c17017-reload reload@
+36 verbose lock reload@ /Users/natejoseph/.npm/a7c17017-reload.lock
+37 silly addNameRange { name: '[-g]', range: '*', hasData: false }
+38 silly addNameRange { name: '[--save-dev]', range: '*', hasData: false }
+39 silly addNameRange { name: 'reload', range: '*', hasData: false }
+40 verbose request where is /[-g]
+41 verbose request registry https://registry.npmjs.org/
+42 verbose request id de668b1e156df977
+43 verbose url raw /[-g]
+44 verbose url resolving [ 'https://registry.npmjs.org/', './%5B-g%5D' ]
+45 verbose url resolved https://registry.npmjs.org/%5B-g%5D
+46 verbose request where is https://registry.npmjs.org/%5B-g%5D
+47 info trying registry request attempt 1 at 13:48:40
+48 http GET https://registry.npmjs.org/%5B-g%5D
+49 verbose request where is /[--save-dev]
+50 verbose request registry https://registry.npmjs.org/
+51 verbose url raw /[--save-dev]
+52 verbose url resolving [ 'https://registry.npmjs.org/', './%5B--save-dev%5D' ]
+53 verbose url resolved https://registry.npmjs.org/%5B--save-dev%5D
+54 verbose request where is https://registry.npmjs.org/%5B--save-dev%5D
+55 info trying registry request attempt 1 at 13:48:40
+56 http GET https://registry.npmjs.org/%5B--save-dev%5D
+57 verbose request where is /reload
+58 verbose request registry https://registry.npmjs.org/
+59 verbose url raw /reload
+60 verbose url resolving [ 'https://registry.npmjs.org/', './reload' ]
+61 verbose url resolved https://registry.npmjs.org/reload
+62 verbose request where is https://registry.npmjs.org/reload
+63 info trying registry request attempt 1 at 13:48:40
+64 verbose etag "8ZMP5OHSI5Z5KQBXHQB0E8ZI"
+65 http GET https://registry.npmjs.org/reload
+66 http 404 https://registry.npmjs.org/%5B-g%5D
+67 silly registry.get cb [ 404,
+67 silly registry.get   { 'content-type': 'application/json',
+67 silly registry.get     'cache-control': 'max-age=0',
+67 silly registry.get     'content-length': '64',
+67 silly registry.get     'accept-ranges': 'bytes',
+67 silly registry.get     date: 'Sun, 06 Sep 2015 17:48:34 GMT',
+67 silly registry.get     via: '1.1 varnish',
+67 silly registry.get     age: '0',
+67 silly registry.get     connection: 'keep-alive',
+67 silly registry.get     'x-served-by': 'cache-iad2122-IAD',
+67 silly registry.get     'x-cache': 'MISS',
+67 silly registry.get     'x-cache-hits': '0',
+67 silly registry.get     'x-timer': 'S1441561714.679235,VS0,VE3' } ]
+68 silly lockFile e58810aa-g [-g]@
+69 silly lockFile e58810aa-g [-g]@
+70 http 304 https://registry.npmjs.org/reload
+71 silly registry.get cb [ 304,
+71 silly registry.get   { date: 'Sun, 06 Sep 2015 17:48:34 GMT',
+71 silly registry.get     via: '1.1 varnish',
+71 silly registry.get     'cache-control': 'max-age=60',
+71 silly registry.get     etag: '"8ZMP5OHSI5Z5KQBXHQB0E8ZI"',
+71 silly registry.get     age: '0',
+71 silly registry.get     connection: 'keep-alive',
+71 silly registry.get     'x-served-by': 'cache-iad2133-IAD',
+71 silly registry.get     'x-cache': 'MISS',
+71 silly registry.get     'x-cache-hits': '0',
+71 silly registry.get     'x-timer': 'S1441561714.678738,VS0,VE53',
+71 silly registry.get     vary: 'Accept' } ]
+72 verbose etag https://registry.npmjs.org/reload from cache
+73 silly addNameRange number 2 { name: 'reload', range: '*', hasData: true }
+74 silly addNameRange versions [ 'reload',
+74 silly addNameRange   [ '0.0.0', '0.0.1', '0.0.2', '0.1.0', '0.2.0', '0.3.0', '0.4.0' ] ]
+75 verbose addNamed [ 'reload', '0.4.0' ]
+76 verbose addNamed [ '0.4.0', '0.4.0' ]
+77 silly lockFile e53da100-reload-0-4-0 reload@0.4.0
+78 verbose lock reload@0.4.0 /Users/natejoseph/.npm/e53da100-reload-0-4-0.lock
+79 silly lockFile e53da100-reload-0-4-0 reload@0.4.0
+80 silly lockFile e53da100-reload-0-4-0 reload@0.4.0
+81 silly lockFile a7c17017-reload reload@
+82 silly lockFile a7c17017-reload reload@
+83 http 404 https://registry.npmjs.org/%5B--save-dev%5D
+84 silly registry.get cb [ 404,
+84 silly registry.get   { 'content-type': 'application/json',
+84 silly registry.get     'cache-control': 'max-age=0',
+84 silly registry.get     'content-length': '72',
+84 silly registry.get     'accept-ranges': 'bytes',
+84 silly registry.get     date: 'Sun, 06 Sep 2015 17:48:35 GMT',
+84 silly registry.get     via: '1.1 varnish',
+84 silly registry.get     age: '0',
+84 silly registry.get     connection: 'keep-alive',
+84 silly registry.get     'x-served-by': 'cache-iad2139-IAD',
+84 silly registry.get     'x-cache': 'MISS',
+84 silly registry.get     'x-cache-hits': '0',
+84 silly registry.get     'x-timer': 'S1441561714.678709,VS0,VE346' } ]
+85 silly lockFile c0a688f3-save-dev [--save-dev]@
+86 silly lockFile c0a688f3-save-dev [--save-dev]@
+87 error 404 Not Found
+87 error 404
+87 error 404 '[-g]' is not in the npm registry.
+87 error 404 You should bug the author to publish it
+87 error 404
+87 error 404 Note that you can also install from a
+87 error 404 tarball, folder, or http url, or git url.
+88 error System Darwin 14.5.0
+89 error command "/Users/natejoseph/.nvm/v0.10.40/bin/node" "/Users/natejoseph/.nvm/v0.10.40/bin/npm" "install" "[-g]" "[--save-dev]" "reload"
+90 error cwd /Users/natejoseph/Documents/00-thinkful/madlib
+91 error node -v v0.10.40
+92 error npm -v 1.4.28
+93 error code E404
+94 verbose exit [ 1, true ]

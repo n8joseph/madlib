@@ -2,46 +2,96 @@
 <html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
-    <title>{{ greeting }} World</title>
+    <title>ngMadLibs | Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.1">
+    <link href='https://fonts.googleapis.com/css?family=Noticia+Text:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body ng-controller="MyCtrl">
-   <div class="headerdiv">
-   		<div id="happydiv">
-   			<img src="mad-lib-happy-face.png" id="happy"/>
-  		</div>
-   		<div id="logodiv">
-   			<img src="ng-mad-libs-logo.png" id="logo"/>
-   			<h1>Automate This!</h1>
-   		</div>
+
+   <div class="container" style="margin-top: 30px; border: 3px solid black">
+    <div class="row">
+     <!-- <div class="headerdiv" class=""> -->
+        <div id="happydiv" class="col-xs-3"  style="border-right: 3px solid black">
+     			<img src="mad-lib-happy-face.png" id="happy"/>
+    		</div>
+     		<!--<div id="logodiv" class="col-xs-9 text-center">
+     			<img src="ng-mad-libs-logo.png" id="logo"/> -->
+     			<h1>Automate This!</h1>
+     		</div>
+     <!-- </div> -->
+     </div>
+   </div>
+      <div class="container" style="padding-top: 50px; padding-bottom: 50px; border-right: 3px solid black; border-left: 3px solid black; border-bottom: 3px solid black">
+        <div class="row">
+          <div class="col-sm-8">
+            <p style="margin-left: 36px; font-size: 16px"><strong>Provide the following words:</strong></p>
+          </div>
+        </div>
+        <div id="inputs">
+          <form name="questionForm" novalidate class="form-horizontal">
+            <div class="form-group form-group-sm">
+              <div class="row" style="margin-bottom: 15px">
+                <div class="col-sm-4">
+                 <input type="text" ng-model="job_title" ng-init="job_title='job title'" style="display: block;
+             margin : 0 auto"/>
+                </div>
+                <div class="col-sm-4">
+                 <input type="text" ng-model="tedious_task" ng-init="tedious_task='tedious task'" style="display: block;
+             margin : 0 auto"/>
+                </div>
+                <div class="col-sm-4">
+                 <input type="text" ng-model="dirty_task" ng-init="dirty_task='dirty task'" style="display: block;
+             margin : 0 auto"/>
+               </div>
+              </div>
+              <div class="row" style="margin-bottom: 15px">
+                <div class="col-sm-4">
+                  <input type="text" ng-model="celebrity" ng-init="celebrity='celebrity'" style="display: block;
+             margin : 0 auto"/>
+                </div>
+                <div class="col-sm-4">
+                  <input type="text" ng-model="useless_skill" ng-init="useless_skill='useless skill'" style="display: block;
+             margin : 0 auto"/>
+                </div>
+                <div class="col-sm-4">
+                  <input type="text" ng-model="adjective" ng-init="adjective='adjective'" style="display: block;
+             margin : 0 auto"/>
+                </div>
+              </div>
+              <div class="row" style="margin-bottom: 15px">
+                <div class="col-sm-4">
+                  <input type="text" ng-model="obnoxious_celebrity" ng-init="obnoxious_celebrity='obnoxious celebrity'" style="display: block;
+             margin : 0 auto"/>
+                </div>
+                <div class="col-sm-4">
+                  <input type="text" ng-model="huge_number" ng-init="huge_number='huge number'" style="display: block;
+             margin : 0 auto"/>
+                </div>
+                <div class="col-sm-4">
+                  <label ng-repeat="gender in genders" for="{{ gender }}" style="margin: 0 0px 0 32px">{{ gender }}
+                  <input type="radio" ng-model="mygender.current" ng-value="gender"/></label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
    </div>
    
-   <div id="inputs">
-      <p>Provide the following words:</p>
-      <input type="text" ng-model="name" ng-init="name='name'">
-      <input type="text" ng-model="job_title" ng-init="job_title='job title'">
-      <input type="text" ng-model="tedious_task" ng-init="tedious_task='tedious task'">
-      <input type="text" ng-model="dirty_task" ng-init="dirty_task='dirty task'">
-      <input type="text" ng-model="celebrity" ng-init="celebrity='celebrity'">
-      <input type="text" ng-model="useless_skill" ng-init="useless_skill='useless skill'">
-      <input type="text" ng-model="adjective" ng-init="adjective='adjective'">
-      <input type="text" ng-model="obnoxious_celebrity" ng-init="obnoxious_celebrity='obnoxious celebrity'">
-      <input type="text" ng-model="huge_number" ng-init="huge_number='huge number'">
-      character gender:
-      <label ng-repeat="gender in genders" for="{{ gender }}">
-      {{ gender }}
-      <input type="radio" ng-model="mygender.current" ng-value="gender">
-      
    </div>
    
-   <div id="story">
-      <p>
-    {{ name }} was a {{ job_title }} who loved technology. Although <span ng-if="mygender.current=='female'">she</span><span ng-if="mygender.current=='male'">he</span> loved parts of her job, she absolutely hated  {{ tedious_task }} and {{ dirty_task }}. So, {{ female_name }} met with her life mentor {{ celebrity }} who told her to learn how to {{ useless_skill }} with Thinkful. Thinkful didn't offer a course on how to {{ useless_skill }} so she studied programming instead. 
- <br/>
- <br/>
-	What a great decision! With <span ng-if="mygender.current=='female'">her</span><span ng-if="mygender.current=='male'">his</span> new skills, {{ name }} built a(n) {{ adjective }} robot named {{ obnoxious_celebrity }} that not only loved {{ dirty_task }} but did it {{ huge_number }} times faster.
-		</p>
-   </div>
+   <div class="container" style="border-right: 3px solid black; border-left: 3px solid black; border-bottom: 3px solid black; padding-top: 30px">
+       <div class="row">
+         <div id="story">
+            <p style="font-size: 16px">
+                <span ng-if="mygender.current=='female'">Homegurl</span><span ng-if="mygender.current=='male'">Homeboi</span> was a {{ job_title }} who loved technology. Although <span ng-if="mygender.current=='female'">she</span><span ng-if="mygender.current=='male'">he</span> loved parts of <span ng-if="mygender.current=='female'">her</span><span ng-if="mygender.current=='male'">his</span> job, <span ng-if="mygender.current=='female'">she</span><span ng-if="mygender.current=='male'">he</span> absolutely hated  {{ tedious_task }} and {{ dirty_task }}. So, <span ng-if="mygender.current=='female'">Homegurl</span><span ng-if="mygender.current=='male'">Homeboi</span> met with <span ng-if="mygender.current=='female'">her</span><span ng-if="mygender.current=='male'">his</span> life mentor {{ celebrity }} who told her to learn {{ useless_skill }} with Thinkful. Thinkful didn't offer a course on {{ useless_skill }}, so <span ng-if="mygender.current=='female'">she</span><span ng-if="mygender.current=='male'">he</span> studied programming instead. 
+                <br/>
+                <br/>
+              	What a great decision! With <span ng-if="mygender.current=='female'">her</span><span ng-if="mygender.current=='male'">his</span> new skills, <span ng-if="mygender.current=='female'">Homegurl</span><span ng-if="mygender.current=='male'">Homeboi</span> built a(n) {{ adjective }} robot named {{ obnoxious_celebrity }} that not only loved {{ dirty_task }} but did it {{ huge_number }} times better.
+      		  </p>
+          </div>
+        </div>
+      </div>
    	
    	<!-- <p>
     

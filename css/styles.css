@@ -1,7 +1,7 @@
 body {
-	border-style: solid;
-	margin: 10% 10%;
+	background-color: salmon;
 }
+
 
 .headerdiv {
 	border-style: solid;
@@ -9,53 +9,60 @@ body {
 
 
 #happy {
-	display: inline-block;
-	height: 80px;
-	margin: 15px 45px;
-	
+	display: block;
+	height: 90px;
+	margin: 0 auto;
+	margin-top: -6px
 }
 
 #logo {
 	
 	
-	height: 65px;
+	height: 45px;
 	padding: 0;
 	margin: 0;
 
 }
 
 #happydiv {
-	display: inline-block;
-	border-style: solid;
-	max-height: 120px;
+	padding-top:6px;
 
 }
 
+
+/*
 #logodiv {
-	display: inline-block;
-	border-style: solid;
-	margin-left: -4px;
-	max-height: 120px;
-	width: 50%;
-	margin: 0 auto;
+	text-align: center;
 }
+*/
 
 h1 {
-	margin: 0;
+	text-align: middle;
+	text-align: center;
 	padding: 0;
+	font-size: 310%;
+	font-family: 'Noticia Text', serif;
+	font-weight: bold;
+	
 }
 
 
 #inputs {
-	border-style: solid;
-	padding: 20px 0 100px 0;
+	
+	padding: 20px 20px 0px 20px;
 }
 
 input {
 	border-style: solid;
 }
 
+.inputrow {
+	margin-bottom: 20px;
+}
+
 #story {
-	border-style: solid;
-	padding-bottom: 100px;	
+	padding: 20px 54px 50px 54px;
+	display: block;
+	text-align: middle;
+
 }

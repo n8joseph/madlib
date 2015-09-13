@@ -57,11 +57,11 @@ input {
 }
 
 .inputrow {
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 }
 
 #story {
-	padding: 20px 54px 50px 54px;
+	padding: 20px 54px 20px 54px;
 	display: block;
 	text-align: middle;
 

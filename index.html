@@ -22,56 +22,66 @@
      <!-- </div> -->
      </div>
    </div>
-      <div class="container" style="padding-top: 50px; padding-bottom: 50px; border-right: 3px solid black; border-left: 3px solid black; border-bottom: 3px solid black">
+      <div class="container" style="padding-top: 50px; padding-bottom: 20px; border-right: 3px solid black; border-left: 3px solid black; border-bottom: 3px solid black" ng-show="myview == 1">
         <div class="row">
           <div class="col-sm-8">
             <p style="margin-left: 36px; font-size: 16px"><strong>Provide the following words:</strong></p>
           </div>
         </div>
         <div id="inputs">
-          <form name="questionForm" novalidate class="form-horizontal">
+          <form name="questionForm" class="form-horizontal" ng-submit="submit()">
             <div class="form-group form-group-sm">
               <div class="row" style="margin-bottom: 15px">
                 <div class="col-sm-4">
-                 <input type="text" ng-model="job_title" ng-init="job_title='job title'" style="display: block;
+                 <input type="text" required ng-model="job_title" placeholder="job title" style="display: block;
              margin : 0 auto"/>
                 </div>
                 <div class="col-sm-4">
-                 <input type="text" ng-model="tedious_task" ng-init="tedious_task='tedious task'" style="display: block;
+                 <input type="text" required ng-model="tedious_task" placeholder="tedious task" style="display: block;
              margin : 0 auto"/>
                 </div>
                 <div class="col-sm-4">
-                 <input type="text" ng-model="dirty_task" ng-init="dirty_task='dirty task'" style="display: block;
+                 <input type="text" required ng-model="dirty_task" placeholder="dirty task" style="display: block;
              margin : 0 auto"/>
                </div>
               </div>
               <div class="row" style="margin-bottom: 15px">
                 <div class="col-sm-4">
-                  <input type="text" ng-model="celebrity" ng-init="celebrity='celebrity'" style="display: block;
+                  <input type="text" required ng-model="celebrity" placeholder="celebrity" style="display: block;
              margin : 0 auto"/>
                 </div>
                 <div class="col-sm-4">
-                  <input type="text" ng-model="useless_skill" ng-init="useless_skill='useless skill'" style="display: block;
+                  <input type="text" required ng-model="useless_skill" placeholder="useless skill" style="display: block;
              margin : 0 auto"/>
                 </div>
                 <div class="col-sm-4">
-                  <input type="text" ng-model="adjective" ng-init="adjective='adjective'" style="display: block;
+                  <input type="text" required ng-model="adjective" placeholder="adjective" style="display: block;
              margin : 0 auto"/>
                 </div>
               </div>
               <div class="row" style="margin-bottom: 15px">
                 <div class="col-sm-4">
-                  <input type="text" ng-model="obnoxious_celebrity" ng-init="obnoxious_celebrity='obnoxious celebrity'" style="display: block;
+                  <input type="text" required ng-model="obnoxious_celebrity" placeholder="obnoxious celebrity" style="display: block;
              margin : 0 auto"/>
                 </div>
                 <div class="col-sm-4">
-                  <input type="text" ng-model="huge_number" ng-init="huge_number='huge number'" style="display: block;
+                  <input type="number" required ng-model="huge_number" placeholder="huge number" style="display: block;
              margin : 0 auto"/>
                 </div>
                 <div class="col-sm-4">
                   <label ng-repeat="gender in genders" for="{{ gender }}" style="margin: 0 0px 0 32px">{{ gender }}
                   <input type="radio" ng-model="mygender.current" ng-value="gender"/></label>
                 </div>
+              </div>
+              <div class="row" style="margin-top: 45px">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                  <input type="submit" value="Generate My Madlib!" ng-click="myview = 2" style="display: block;
+             margin : 0 auto"/>
+                </div>
+                
+
               </div>
             </div>
           </form>
@@ -80,18 +90,28 @@
    
    </div>
    
-   <div class="container" style="border-right: 3px solid black; border-left: 3px solid black; border-bottom: 3px solid black; padding-top: 30px">
+   <div class="container" style="border-right: 3px solid black; border-left: 3px solid black; border-bottom: 3px solid black; padding-top: 30px; padding-bottom: 30px" ng-show="myview == 2">
        <div class="row">
          <div id="story">
             <p style="font-size: 16px">
-                <span ng-if="mygender.current=='female'">Homegurl</span><span ng-if="mygender.current=='male'">Homeboi</span> was a {{ job_title }} who loved technology. Although <span ng-if="mygender.current=='female'">she</span><span ng-if="mygender.current=='male'">he</span> loved parts of <span ng-if="mygender.current=='female'">her</span><span ng-if="mygender.current=='male'">his</span> job, <span ng-if="mygender.current=='female'">she</span><span ng-if="mygender.current=='male'">he</span> absolutely hated  {{ tedious_task }} and {{ dirty_task }}. So, <span ng-if="mygender.current=='female'">Homegurl</span><span ng-if="mygender.current=='male'">Homeboi</span> met with <span ng-if="mygender.current=='female'">her</span><span ng-if="mygender.current=='male'">his</span> life mentor {{ celebrity }} who told her to learn {{ useless_skill }} with Thinkful. Thinkful didn't offer a course on {{ useless_skill }}, so <span ng-if="mygender.current=='female'">she</span><span ng-if="mygender.current=='male'">he</span> studied programming instead. 
+                <span ng-if="mygender.current=='female'">Homegurl</span><span ng-if="mygender.current=='male'">Homeboi</span> was a {{ job_title }} who loved technology. Although <span ng-if="mygender.current=='female'">she</span><span ng-if="mygender.current=='male'">he</span> loved parts of <span ng-if="mygender.current=='female'">her</span><span ng-if="mygender.current=='male'">his</span> job, <span ng-if="mygender.current=='female'">she</span><span ng-if="mygender.current=='male'">he</span> absolutely hated  {{ tedious_task }} and {{ dirty_task }}. So, <span ng-if="mygender.current=='female'">Homegurl</span><span ng-if="mygender.current=='male'">Homeboi</span> met with <span ng-if="mygender.current=='female'">her</span><span ng-if="mygender.current=='male'">his</span> life mentor {{ celebrity }} who told <span ng-if="mygender.current=='female'">her</span><span ng-if="mygender.current=='male'">him</span> to learn {{ useless_skill }} with Thinkful. Thinkful didn't offer a course on {{ useless_skill }}, so <span ng-if="mygender.current=='female'">she</span><span ng-if="mygender.current=='male'">he</span> studied programming instead. 
                 <br/>
                 <br/>
               	What a great decision! With <span ng-if="mygender.current=='female'">her</span><span ng-if="mygender.current=='male'">his</span> new skills, <span ng-if="mygender.current=='female'">Homegurl</span><span ng-if="mygender.current=='male'">Homeboi</span> built a(n) {{ adjective }} robot named {{ obnoxious_celebrity }} that not only loved {{ dirty_task }} but did it {{ huge_number }} times better.
       		  </p>
           </div>
         </div>
-      </div>
+      <form name="resetForm" ng-submit="submit2()">
+        <div class="row" style="margin-top:20px">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                  <input type="submit" value="Reset" ng-click="myview = 1" style="display: block;
+             margin : 0 auto"/>
+                </div>
+        </div>
+      </form>
+    </div>
    	
    	<!-- <p>
     
